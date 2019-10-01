@@ -1,0 +1,23 @@
+canvas {
+  background: white;
+  z-index: -1;
+}
+.transparent{
+  text-align: center;
+  z-index: 0;
+  position: absolute;
+  margin: auto;
+  top: 200px;
+  width: 30%;
+  left: 50%;
+
+}
+html{
+  font-family: "Calibri", Gadget, sans-serif;
+  background:rgba(255,255,255,0.8);
+}
+.what-header, .what-paragraph{
+  left: -50%;
+  position: relative;
+  background:rgba(255,255,255,0.8);
+}
