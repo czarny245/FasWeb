@@ -1,13 +1,26 @@
+body{
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+body.open{
+    height: 100%;
+    overflow: auto;
+}
+
 canvas {
   background: white;
   z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 .transparent{
   text-align: center;
   z-index: 0;
   position: absolute;
   margin: auto;
-  top: 200px;
+  top: 600px;
   width: 30%;
   left: 50%;
 
@@ -20,4 +33,192 @@ html{
   left: -50%;
   position: relative;
   background:rgba(255,255,255,0.8);
+}
+.black-header{
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+.logo{
+  width: 400px;
+  opacity: 0;
+  color: #B9B2AC;
+  top: 200px;
+  position: relative;
+}
+.logo.vanishIn{
+    z-index: 2;
+    opacity: 1;
+    transition: 2s;
+}
+.logo.vanishIn.open{
+    top: 0px;
+    transition-timing-function: ease-in;
+    transition: 1s
+}
+.magictime.vanishIn {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+.entry-form{
+    opacity: 0;
+}
+.entry-form.vanishIn{
+    opacity: 1;
+    transition: 1s;
+}
+.entry-form.remove{
+    display: none;
+    transition: 2s;
+}
+.black-header.open{
+    height: 400px;
+    transition-timing-function: ease-in;
+    transition: 1s
+}
+.logo-pass.open{
+    transition-timing-function: ease-in;
+    transition: 1s
+}
+.password-submit{
+    z-index: 3;
+    border: solid 2px;
+    border-block-color: #B9B2AC;
+    border-radius: 25px;
+    border-color: #B9B2AC;
+    margin-top :20px;
+    color: #B9B2AC;
+    padding: 5px;
+}
+.password-submit:hover{
+    color: black;
+    background-color: #B9B2AC;
+    transition: 0.3s;
+}
+.form-div{
+    margin-top: 300px;
+}
+.video-header {
+    text-align: center;
+    margin-top: 40px;
+    width: 30%;
+    margin: auto;
+}
+.iframe {
+    margin: auto;
+    display: block;
+}
+.discover-container{
+    margin-top: 50px;
+    display: flex;
+}
+.discover-text{
+    display: inline-block;
+    width: 30%;
+    margin-left: 15%;
+}
+.discover-graphics{
+    display: inline-block;
+    width: 100%;
+    position:relative;
+}
+.telescope{
+    width: 30vw;
+    bottom: 0px;
+    position: absolute;
+    background:rgba(255,255,255,0.9);
+}
+.canvas1 {
+    width: 600px;
+    height: 300px;
+}
+.canvas-container{
+}
+.market-leader-section{
+    display: flex
+}
+.left-side{
+    width: 30%;
+    margin-left: 15%;
+    margin-right: 40px;
+}
+.leader-img {
+    width: 300px;
+}
+.quote-img {
+    width: 75%;
+    margin: auto;
+    display: block;
+}
+.portfolio-section{
+    display: flex;
+}
+.portfolio-header{
+    margin-top: 80px;
+}
+.edge-section{
+    position: relative;
+}
+.middle-section{
+    display: block;
+    position: absolute;
+    width: 25%;
+    left: 50%;
+    text-align: center;
+    top: 0px;
+}
+.canvas-edge-container {
+    margin-left: 15%
+}
+.edgy-header{
+    left: -50%;
+    position: relative;
+    background:rgba(255,255,255,0.9);
+    border-radius: 25px;
+}
+.edgy-paragraph{
+    left: -50%;
+    position: relative;
+    background:rgba(255,255,255,0.9);
+    border-radius: 25px;
+}
+.philosophy-section{
+    position:relative;
+}
+.philosophy{
+    position: absolute;
+    top: 0px;
+    right: 15%;
+    width: 30%;
+}
+#canvas-phil-container{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+}
+.phil-header, .phil-paragraph {
+    background:rgba(255,255,255,0.9);
+    border-radius: 25px;
+    padding: 10px;
+}
+.infographic-section {
+    position: relative;
+}
+.info-header-cont{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    text-align: center;
+}
+.info-header{
+    left: -50%;
+    position: relative;
+}
+.info-img{
+    width: 95%;
+    margin-top: 150px;
+    margin-left: 20px;
 }

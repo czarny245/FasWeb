@@ -6,7 +6,7 @@ canvas.height = window.innerHeight;
 
 var stars = [], // Array that contains the stars
     FPS = 60, // Frames per second
-    x = 100, // Number of stars
+    x = 150, // Number of stars
     mouse = {
       x: 0,
       y: 0
@@ -59,14 +59,14 @@ function draw() {
     if(distance(mouse, starI) < 150) ctx.lineTo(mouse.x, mouse.y);
     for (var j = 0, x = stars.length; j < x; j++) {
       var starII = stars[j];
-      if(distance(starI, starII) < 100) {
-        //ctx.globalAlpha = (1 / 150 * distance(starI, starII).toFixed(1));
+      if(distance(starI, starII) < 120) {
+//        ctx.globalAlpha = (1 / 150 * distance(starI, starII).toFixed(1));
         ctx.lineTo(starII.x,starII.y);
       }
     }
   }
-  ctx.lineWidth = 0.05;
-  ctx.strokeStyle = 'blue';
+  ctx.lineWidth = 0.10;
+  ctx.strokeStyle = rand;
   ctx.stroke();
 }
 
