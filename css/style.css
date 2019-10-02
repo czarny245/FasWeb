@@ -170,8 +170,8 @@ html{
     text-align: center;
     top: 0px;
 }
-.canvas-edge-container {
-    margin-left: 15%
+#canvas-edge-container {
+    height: 500px;
 }
 .edgy-header{
     left: -50%;
