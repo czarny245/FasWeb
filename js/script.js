@@ -1,3 +1,6 @@
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
 setTimeout(function(){
     $('.logo').addClass('vanishIn');
 }, 1000);
