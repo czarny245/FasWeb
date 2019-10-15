@@ -10,6 +10,12 @@ let style_width123 = +getComputedStyle(canvas).getPropertyValue("width").slice(0
 canvas.width = style_width123
 canvas.height = style_height123
 
+var SCREEN_WIDTH = $(window).width();
+var SCREEN_HEIGHT = $(window).height();
+
+var mouseX = (window.innerWidth - SCREEN_WIDTH);
+var mouseY = (window.innerHeight - SCREEN_HEIGHT);
+
 var x
 if (innerWidth < 600) {x = 35} else {x = 150}
 
@@ -17,8 +23,11 @@ var stars = [], // Array that contains the stars
     FPS = 60, // Frames per second
     x = x, // Number of stars
     mouse = {
-      x: 0,
-      y: 0
+      x: mouseX,
+      y: mouseY
+
+//      x: 0,
+//      y: 0
     };  // mouse location
 
 
@@ -106,10 +115,22 @@ function update() {
   }
 }
 
-canvas.addEventListener('mousemove', function(e){
-  mouse.x = e.clientX;
-  mouse.y = e.clientY;
-});
+//canvas.addEventListener('mousemove', function(e){
+//  mouse.x = e.clientX;
+//  mouse.y = e.clientY;
+//});
+
+
+document.addEventListener('mousemove', documentMouseMoveHandler, false);
+document.addEventListener('mousedown', documentMouseDownHandler, false);
+document.addEventListener('mouseup', documentMouseUpHandler, false);
+canvas.addEventListener('touchstart', canvasTouchStartHandler, false);
+canvas.addEventListener('touchmove', canvasTouchMoveHandler, false);
+window.addEventListener('resize', windowResizeHandler, false);
+
+
+
+
 
 // Update and draw
 
@@ -120,3 +141,46 @@ function tick() {
 }
 
 tick();
+
+///////////////////////////////////////
+
+
+function documentMouseMoveHandler(event) {
+	mouseX = event.clientX - (window.innerWidth - SCREEN_WIDTH) * .5;
+	mouseY = event.clientY - (window.innerHeight - SCREEN_HEIGHT) * .5;
+}
+
+function documentMouseDownHandler(event) {
+	mouseIsDown = true;
+}
+
+function documentMouseUpHandler(event) {
+	mouseIsDown = false;
+}
+function canvasTouchStartHandler(event) {
+if(event.touches.length == 1) {
+		event.preventDefault();
+		mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5;
+		mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5;
+	}
+}
+
+function canvasTouchMoveHandler(event) {
+	if(event.touches.length == 1) {
+		event.preventDefault();
+		mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5;
+		mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5;
+	}
+}
+
+function windowResizeHandler() {
+	//SCREEN_WIDTH = window.innerWidth;
+	//SCREEN_HEIGHT = window.innerHeight;
+
+	canvas.width = SCREEN_WIDTH;
+	canvas.height = SCREEN_HEIGHT;
+
+	canvas.style.position = 'absolute';
+	canvas.style.left = (window.innerWidth - SCREEN_WIDTH) * .5 + 'px';
+	canvas.style.top = (window.innerHeight - SCREEN_HEIGHT) * .5 + 'px';
+}
