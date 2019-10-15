@@ -3,14 +3,14 @@ var ctx1 = canvas1.getContext("2d");
 
 
 
-let style_height = +getComputedStyle(canvas1).getPropertyValue("height").slice(0, -2);
-let style_width = +getComputedStyle(canvas1).getPropertyValue("width").slice(0, -2)+100;
+let style_height1 = +getComputedStyle(canvas1).getPropertyValue("height").slice(0, -2);
+let style_width1 = +getComputedStyle(canvas1).getPropertyValue("width").slice(0, -2);
 
 //canvas.setAttribute('height', style_height);
 //canvas.setAttribute('width', style_width);
 
-canvas1.width = style_width;
-canvas1.height = style_height;
+canvas1.width = style_width1;
+canvas1.height = style_height1;
 
 var num1
 if (innerWidth < 600) {num1 = 7} else {num1 = 25}
@@ -48,7 +48,7 @@ for (var i = 0; i < num1; i++) {
 // Draw the scene
 
 function draw1() {
-  ctx1.clearRect(0,0,canvas.width,canvas.height);
+  ctx1.clearRect(0,0,canvas1.width,canvas1.height);
 
   ctx1.globalCompositeOperation = "lighter";
 
