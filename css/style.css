@@ -200,7 +200,7 @@ html{
 .middle-section{
     display: block;
     margin: auto;
-    width: 300px;
+    max-width: 450px;
     text-align: center;
     top: 0px;
 }
@@ -210,7 +210,6 @@ html{
     width:100%;
 }
 .edgy-header{
-    left: -50%;
     position: relative;
     background:rgba(255,255,255,0.9);
     border-radius: 25px;
@@ -264,10 +263,9 @@ html{
 }
 .info-img{
     width: 95%;
-    margin-top: 150px;
-    margin-left: 20px;
+    margin-top: 200px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
     .black-header{
         height: 100vh;
     }
@@ -279,7 +277,8 @@ html{
         width: 50%;
     }
     .telescope{
-        bottom: 10px;
+        top: -10px;
+        width: 20vw;
     }
     #canvas1{
         height: 100%;
@@ -297,7 +296,7 @@ html{
         font-size: 18px;
     }
     .transparent{
-        padding-top: 35vh;
+        padding-top: 150px;
     }
     .what-header{
     }
@@ -321,7 +320,8 @@ html{
         margin-left:5%;
     }
     .discover-graphics{
-        height:150px;
+        height: 100%;
+        z-index: -1;
     }
     .discover-text > p:nth-child(2){
         width: 90vw;
@@ -349,19 +349,22 @@ html{
         width: 98vw;
     }
     .middle-section{
-        margin-left: 3%;
+        margin: auto;
+        max-width: 380px;
+        display: block;
+        text-align: center
     }
     #canvas-edge-container{
         width: 100vw;
         height: 450px;
     }
     .edgy-paragraph{
-    background:rgba(255,255,255,0.5);
+    background:rgba(255,255,255,0.7);
     }
     .phil-header {
         padding: 2px;
         margin-left: 200px;
-        background:rgba(255,255,255,0.5)
+        background:rgba(255,255,255,0.7)
     }
     .phil-paragraph{
         width: 70vw;
@@ -378,4 +381,14 @@ html{
         margin-left: 15%
         magin-right: 15%
     }
+    .discover-text > p:nth-child(2){
+        background:rgba(255,255,255,0.7);
+    }
 }
+@media only screen and (max-width: 485px) {
+    .telescope{
+        top: 60px;
+        width: 30vw;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1200px) {}
