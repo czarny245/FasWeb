@@ -24,7 +24,7 @@ var stars2 = [], // Array that contains the stars
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
-var colors = ['#5fa6d9', '#5fbbd9', '#cadfe6', '#489bfa']
+var colors = ['#324FAA', '#D0D0D0', '#99B0E1', '#3A7CF9']
 
 var rand = colors[Math.floor(Math.random() * colors.length)];
 
@@ -38,7 +38,8 @@ for (var i = 0; i < num2; i++) {
     //radius: Math.random() * 1 + 1,
     radius: getRandomInt(5)+3,
     vx: Math.floor(Math.random() * 50) - 25,
-    vy: Math.floor(Math.random() * 50) - 25
+    vy: Math.floor(Math.random() * 50) - 25,
+    color: colors[Math.round(Math.random() * colors.length)],
   });
 }
 
@@ -52,11 +53,10 @@ function draw2() {
   for (var i = 0, x = stars2.length; i < x; i++) {
     var s = stars2[i];
 
-    ctx2.fillStyle = rand;
+    ctx2.fillStyle = s.color;
     ctx2.beginPath();
     ctx2.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
     ctx2.fill();
-    ctx2.fillStyle = 'black';
     ctx2.stroke();
   }
 

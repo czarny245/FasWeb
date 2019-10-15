@@ -27,7 +27,7 @@ var yellow_stars = [], // Array that contains the stars
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
-var colors = ['#5fa6d9', '#5fbbd9', '#cadfe6', '#489bfa']
+var colors = ['#324FAA', '#D0D0D0', '#99B0E1', '#3A7CF9']
 
 var rand = colors[Math.floor(Math.random() * colors.length)];
 

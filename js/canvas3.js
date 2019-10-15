@@ -38,7 +38,8 @@ for (var i = 0; i < num3; i++) {
     //radius: Math.random() * 1 + 1,
     radius: getRandomInt(7)+3,
     vx: Math.floor(Math.random() * 50) - 25,
-    vy: Math.floor(Math.random() * 50) - 25
+    vy: Math.floor(Math.random() * 50) - 25,
+    color: colors[Math.round(Math.random() * colors.length)],
   });
 }
 
@@ -52,11 +53,10 @@ function draw3() {
   for (var i = 0, x = stars3.length; i < x; i++) {
     var s = stars3[i];
 
-    ctx3.fillStyle = rand;
+    ctx3.fillStyle = s.color;
     ctx3.beginPath();
     ctx3.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
     ctx3.fill();
-    ctx3.fillStyle = 'black';
     ctx3.stroke();
   }
 
