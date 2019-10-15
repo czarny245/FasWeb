@@ -32,11 +32,15 @@ body.open{
 h1{
   font-family: "pt sans", Gadget, sans-serif;
   font-weight: normal;
-  font-size: 45px;
+  font-size: 50px;
 }
 h2{
   font-family: "pt sans", Gadget, sans-serif;
   font-weight: normal;
+  font-size: 30px;
+}
+p{
+    font-size: 22px;
 }
 
 html{
@@ -159,10 +163,11 @@ html{
 .telescope-canvas-container{
     width: 100%;
     height: 100%;
+    z-index: -1;
 }
 #canvas1{
     width: 100%;
-    height: 100%;
+    height: 40vh;
 }
 .market-leader-section{
     display: flex;
@@ -176,6 +181,7 @@ html{
 }
 .leader-img {
     width: 300px;
+
 }
 .quote-img {
     width: 75%;
@@ -201,7 +207,7 @@ html{
     top: 0px;
 }
 #canvas-edge-container {
-    height: 500px;
+    height: 700px;
     position: absolute;
     width:100%;
 }
@@ -277,6 +283,9 @@ html{
     .telescope{
         bottom: 10px;
     }
+    #canvas1{
+        height: 100%;
+    }
     .form-div{
         margin-top: 150px;
     }
@@ -284,7 +293,10 @@ html{
         height: 30vh;
     }
     h1 {
-        font-size: 25px;
+        font-size: 38px;
+    }
+    p {
+        font-size: 18px;
     }
     .transparent{
         padding-top: 35vh;
@@ -292,7 +304,6 @@ html{
     .what-header{
     }
     .what-paragraph{
-        font-size: 11px;
         padding-left:30px;
         padding-right:30px;
         padding-bottom:100px;
@@ -319,10 +330,13 @@ html{
     }
     .left-side{
         margin-left: 3%;
-        margin-right: 0px;
+        margin-right: 3%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
     }
     .leader-img{
-        width: 100px;
+        width: 200px;
     }
     .quote-img{
         width: 98vw;
@@ -336,14 +350,12 @@ html{
     .portfolio-section > div:nth-child(1) > p:nth-child(2){
         width: 98vw;
     }
-    p{
-    font-size: 15px;
-    }
     .middle-section{
         margin-left: 3%;
     }
     #canvas-edge-container{
         width: 100vw;
+        height: 450px;
     }
     .edgy-paragraph{
     background:rgba(255,255,255,0.5);

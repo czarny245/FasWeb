@@ -13,7 +13,7 @@ canvas1.width = style_width;
 canvas1.height = style_height;
 
 var num1
-if (innerWidth < 600) {num1 = 5} else {num1 = 15}
+if (innerWidth < 600) {num1 = 7} else {num1 = 25}
 
 var yellow_stars = [], // Array that contains the stars
     FPS = 60, // Frames per second
@@ -59,7 +59,6 @@ function draw1() {
     ctx1.beginPath();
     ctx1.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
     ctx1.fill();
-    ctx1.fillStyle = 'black';
     ctx1.stroke();
   }
 
