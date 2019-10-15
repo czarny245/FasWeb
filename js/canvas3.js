@@ -9,9 +9,12 @@ let style_width3 = +getComputedStyle(canvas3).getPropertyValue("width").slice(0,
 canvas3.width = style_width3;
 canvas3.height = style_height3;
 
+var num3
+if (innerWidth < 600) {num3 = 60} else {num3 = 120}
+
 var stars3 = [], // Array that contains the stars
     FPS = 60, // Frames per second
-    num3 = 120, // Number of stars
+    num3 = num3, // Number of stars
     mouse = {
       x: 0,
       y: 0
