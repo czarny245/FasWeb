@@ -340,7 +340,6 @@ html{
         height: 100vh;
     }
     .logo{
-        width: 100vw;
         top: 100px;
     }
     .logo.open{
@@ -432,7 +431,7 @@ html{
 }
 @media only screen and (min-width: 600px) and (max-width: 1200px) {
     .logo{
-        width: 500px;
+        width: 350px;
     }
     .logo.open{
         width: 200px;
