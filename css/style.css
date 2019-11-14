@@ -354,7 +354,7 @@ html{
         margin-top: 150px;
     }
     .black-header.open {
-        height: 30vh;
+        height: 200px;
     }
     h1 {
         font-size: 38px;
@@ -464,6 +464,9 @@ html{
     .logo{
         width: 250px;
     }
+    .video-header{
+        width: 95%;
+    }
 }
 @media only screen and (max-width: 1000px) {
     .discover-text{
@@ -477,10 +480,21 @@ html{
     h2 {
         font-size: 35px;
     }
+    .empty-row2,
+    .empty-row3,
+    .empty-row4{
+        display: none;
+    }
 }
 @media only screen and (min-width: 800px) {
     .quote-box{
         margin-top: 70px;
         margin-bottom: 70px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .discover-graphics{
+        height: 250px;
+        max-width: 90vw;
     }
 }
