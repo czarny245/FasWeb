@@ -9,6 +9,50 @@ body.open{
     height: 100%;
     overflow: auto;
 }
+/*Sign in section*/
+label {
+    text-transform: uppercase;
+    color: #989898;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+input {
+    color: #434343;
+}
+input:focus {
+    opacity: .8;
+}
+.name-input,
+.email-input {
+    padding: 5px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    opacity: .1;
+    transition: all ease .4s;
+}
+.not-completed{
+    border: solid;
+    border-color: red;
+    opacity: 1;
+}
+.submit {
+    border-radius: 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 150px;
+    padding: 1rem;
+    transition: all ease .4s;
+}
+.submit:hover {
+    background-color: #44c8ed;
+    border-color: #44c8ed;
+    cursor: pointer;
+}
 
 #canvas {
   background: white;
@@ -429,5 +473,11 @@ html{
     }
     h2 {
         font-size: 35px;
+    }
+}
+@media only screen and (min-width: 800px) {
+    .quote-box{
+        margin-top: 70px;
+        margin-bottom: 70px;
     }
 }

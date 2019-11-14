@@ -14,8 +14,11 @@
             <img class="logo" src="static/platinum logo.svg" alt="logo image">
             <div class="form-div">
                 <form class="entry-form">
-                    <input/><br><br><br>
-                    <a class="password-submit">submit</a>
+                    <label for="name-input">Name:</label><br>
+                    <input class="name-input" id="name-input"><br>
+                    <label for="email-input">Email:</label><br>
+                    <input class="email-input" id="email-input"><br><br><br>
+                    <a type="submit" class="submit">Submit</a>
                 </form>
             </div>
         </div>
@@ -29,17 +32,21 @@
     </div>
     <div class="empty-row"></div>
     <div class="empty-row"></div>
+    <div class="empty-row"></div>
+    <div class="empty-row"></div>
     <div class="video-header">
         <h1>
             Watch the Video Online about Fasanara Capital
         </h1>
     </div>
         <iframe class="iframe" src="https://player.vimeo.com/video/369854912"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-    <picture>
-        <source media="(max-width: 800px)" srcset="static/effort_quote_small.jpg">
-        <source media="(min-width: 801px)" srcset="static/quote.jpg">
-        <img class="quote-img" src="static/quote.jpg" alt="quote img"/>
-    </picture>
+    <div class="quote-box">
+        <picture>
+            <source media="(max-width: 800px)" srcset="static/effort_quote_small.jpg">
+            <source media="(min-width: 801px)" srcset="static/quote.jpg">
+            <img class="quote-img" src="static/quote.jpg" alt="quote img"/>
+        </picture>
+    </div>
     <div class="video-header">
         <h1>
             Discover New Market Niche
@@ -76,11 +83,13 @@
             <iframe class="iframe-side" src="https://player.vimeo.com/video/369574779" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
     </div>
-    <picture>
-        <source media="(max-width: 800px)" srcset="static/vision_qote_small.jpg">
-        <source media="(min-width: 801px)" srcset="static/quotep.png">
-        <img id="quote1" class="quote-img" src="static/quotep.png" alt ="quote image"/>
-    </picture>
+    <div class="quote-box">
+        <picture>
+            <source media="(max-width: 800px)" srcset="static/vision_qote_small.jpg">
+            <source media="(min-width: 801px)" srcset="static/quotep.png">
+            <img id="quote1" class="quote-img" src="static/quotep.png" alt ="quote image"/>
+        </picture>
+    </div>
     <div class="portfolio-section">
         <div class="left-side">
             <h2 class="portfolio-header">Portfolio  |</h2>
@@ -126,11 +135,13 @@
             <canvas id="canvas3"></canvas>
         </div>
     </div>
-    <picture>
-        <source media="(max-width: 800px)" srcset="static/mission_qote_small.jpg">
-        <source media="(min-width: 801px)" srcset="static/quote2.jpg">
-        <img id="quote2" class="quote-img" src="static/quote2.jpg" alt ="quote image"/>
-    </picture>
+    <div class="quote-box">
+        <picture>
+            <source media="(max-width: 800px)" srcset="static/mission_qote_small.jpg">
+            <source media="(min-width: 801px)" srcset="static/quote2.jpg">
+            <img id="quote2" class="quote-img" src="static/quote2.jpg" alt ="quote image"/>
+        </picture>
+    </div>
     <div class="infographic-section">
         <div class="info-header-cont">
             <h2 class="info-header">FASANARA Infographic <br>2019</h2>
@@ -143,6 +154,7 @@
 
 </body>
 <footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="text/javascript" src="js/lib/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/canvas.js"></script>
     <script type="text/javascript" src="js/canvas1.js"></script>
