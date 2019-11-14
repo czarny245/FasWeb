@@ -385,12 +385,6 @@ html{
     .quote1{
         width: 98vw;
     }
-    .market-leader-section > div:nth-child(1) > p:nth-child(3){
-        width: 98vw;
-    }
-    .portfolio-section > div:nth-child(1) > p:nth-child(2){
-        width: 98vw;
-    }
     .middle-section{
         margin: auto;
         max-width: 380px;
@@ -480,10 +474,16 @@ html{
     h2 {
         font-size: 35px;
     }
+    .empty-row{
+        display: none;
+    }
     .empty-row2,
     .empty-row3,
     .empty-row4{
         display: none;
+    }
+    .right-side{
+    padding-top: 20px;
     }
 }
 @media only screen and (min-width: 800px) {
