@@ -404,7 +404,6 @@ html{
     }
     .phil-header {
         padding: 2px;
-        margin-left: 200px;
         background:rgba(255,255,255,0.7)
     }
     .phil-paragraph{
@@ -422,6 +421,9 @@ html{
     }
     .discover-text > p:nth-child(2){
         background:rgba(255,255,255,0.7);
+    }
+    .info-img:focus {
+
     }
 }
 @media only screen and (max-width: 485px) {
