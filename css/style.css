@@ -154,6 +154,10 @@ html{
     transition-timing-function: ease-in;
     transition: 1s
 }
+.logo-pass{
+    height: 150vh;
+    background-color: black;
+}
 .password-submit{
     z-index: 3;
     border: solid 2px;
