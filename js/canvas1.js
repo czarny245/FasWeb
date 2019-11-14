@@ -69,10 +69,10 @@ function draw1() {
     if(distance(mouse, starI) < 150) ctx.lineTo(mouse.x, mouse.y);
     for (var j = 0, x = yellow_stars.length; j < x; j++) {
       var starII = yellow_stars[j];
-      if(distance(starI, starII) < 100) {
-        //ctx.globalAlpha = (1 / 150 * distance(starI, starII).toFixed(1));
-        ctx1.lineTo(starII.x,starII.y);
-      }
+      // if(distance(starI, starII) < 100) {
+      //   //ctx.globalAlpha = (1 / 150 * distance(starI, starII).toFixed(1));
+      //   ctx1.lineTo(starII.x,starII.y);
+      // }
     }
   }
   ctx1.lineWidth = 0.50;

@@ -42,7 +42,6 @@ h2{
 p{
     font-size: 22px;
 }
-
 html{
   font-family: "pt sans", Gadget, sans-serif;
   background:rgba(255,255,255,0.8);
@@ -136,23 +135,39 @@ html{
     margin: auto;
 }
 .iframe {
-    width: 90%;
+    width: 100%;
+    height: 800px;
+    margin: auto;
+    display: block;
+}
+.iframe-side {
+    width: 100%;
+    height: 500px;
     margin: auto;
     display: block;
 }
 .discover-container{
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
 }
 .discover-text{
     display: inline-block;
-    width: 30%;
-    margin-left: 15%;
+    max-width: 30%;
+    margin-left: 30px;
+    margin-right: 10%;
+    float: left;
 }
 .discover-graphics{
+    height: 500px;
+    flex-grow: 2;
+    -webkit-flex-grow: 1;
+    max-width: 50%;
     display: inline-block;
-    width: 100%;
     position: relative;
+    float: right;
+    margin-left:5%;
 }
 .telescope{
     width: 30vw;
@@ -200,6 +215,7 @@ html{
 }
 .edge-section{
     position: relative;
+    margin-top: 70px;
 }
 .middle-section{
     display: block;
@@ -283,10 +299,6 @@ html{
     .logo.open{
         width: 50%;
     }
-    .telescope{
-        top: -10px;
-        width: 20vw;
-    }
     #canvas1{
         height: 100%;
     }
@@ -310,21 +322,11 @@ html{
         width: 100vw;
     }
     .video-header{
-        width: 90vw;
-    }
-    .discover-text{
-        margin-left:5%;
-    }
-    .discover-graphics{
-        height: 100%;
-        z-index: -1;
-    }
-    .discover-text > p:nth-child(2){
-        width: 90vw;
+        max-width: 90vw;
     }
     .left-side{
-        margin-left: 3%;
-        margin-right: 3%;
+        margin-left: 5%;
+        margin-right: 5%;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -374,17 +376,14 @@ html{
         margin-left: 3%;
     }
     .edge-section{
-        margin-left: 15%
-        magin-right: 15%
     }
     .discover-text > p:nth-child(2){
         background:rgba(255,255,255,0.7);
     }
 }
 @media only screen and (max-width: 485px) {
-    .telescope{
-        top: 60px;
-        width: 30vw;
+    .iframe{
+        height: 500px;
     }
 }
 @media only screen and (min-width: 600px) and (max-width: 1200px) {
@@ -398,17 +397,35 @@ html{
         width: 60%;
     }
     .iframe{
-        width: 100%;
+        height: 500px;
     }
 }
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
-    .discover-text{
-        padding-top: 150px;
-    }
     .left-side{
         width: 70%;
     }
     .right-side{
         width: 100%;
+    }
+    .iframe{
+        height: 500px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .discover-text{
+        width: 100%;
+    }
+    .discover-graphics{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .discover-text{
+        margin-left:5%;
+        max-width: 90vw;
+    }
+    .discover-graphics{
+        height: 400px;
+        max-width: 90vw;
     }
 }
