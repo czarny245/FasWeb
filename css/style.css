@@ -103,7 +103,7 @@ html{
   position: absolute;
   z-index: 1;
   background-color: black;
-  height: 100vh;
+  height: 150vh;
   width: 100vw;
   text-align: center;
 }
