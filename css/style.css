@@ -428,13 +428,12 @@ html{
     .iframe{
         height: 500px;
     }
+
 }
 @media only screen and (min-width: 600px) and (max-width: 1200px) {
+
     .logo{
-        width: 350px;
-    }
-    .logo.open{
-        width: 200px;
+        width: 250px;
     }
     .transparent {
         width: 60%;
@@ -459,6 +458,9 @@ html{
     }
     .discover-graphics{
         width: 100%;
+    }
+    .logo{
+        width: 250px;
     }
 }
 @media only screen and (max-width: 1000px) {
