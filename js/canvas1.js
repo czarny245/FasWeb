@@ -15,6 +15,14 @@ canvas1.height = style_height1;
 var num1
 if (innerWidth < 600) {num1 = 7} else {num1 = 25}
 
+// getLineDistance = function() {
+//   var line_distance
+//   if (innerWidth < 700) {line_distance = 50}
+//   if (innerWidth < 1000) {line_distance = 80}
+//   else {line_distance = 120}
+//   return line_distance
+// }
+
 var yellow_stars = [], // Array that contains the stars
     FPS = 60, // Frames per second
     num1 = num1, // Number of stars
@@ -66,7 +74,7 @@ function draw1() {
   for (var i = 0, x = yellow_stars.length; i < x; i++) {
     var starI = yellow_stars[i];
     ctx1.moveTo(starI.x,starI.y);
-    if(distance(mouse, starI) < 150) ctx.lineTo(mouse.x, mouse.y);
+    if(distance(mouse, starI) < getLineDistance()) ctx.lineTo(mouse.x, mouse.y);
     for (var j = 0, x = yellow_stars.length; j < x; j++) {
       var starII = yellow_stars[j];
       // if(distance(starI, starII) < 100) {

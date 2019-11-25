@@ -66,7 +66,7 @@ function draw2() {
     ctx2.moveTo(starI.x,starI.y);
     for (var j = 0, x = stars2.length; j < x; j++) {
       var starII = stars2[j];
-      if(distance(starI, starII) < 100) {
+      if(distance(starI, starII) < getLineDistance()) {
         //ctx.globalAlpha = (1 / 150 * distance(starI, starII).toFixed(1));
         ctx2.lineTo(starII.x,starII.y);
       }

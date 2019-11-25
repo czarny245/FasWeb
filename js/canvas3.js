@@ -36,10 +36,12 @@ for (var i = 0; i < num3; i++) {
     x: Math.random() * canvas3.width,
     y: Math.random() * canvas3.height,
     //radius: Math.random() * 1 + 1,
-    radius: getRandomInt(7)+3,
+    // radius: getRandomInt(2)+2,
+    radius: 4.5,
     vx: Math.floor(Math.random() * 50) - 25,
     vy: Math.floor(Math.random() * 50) - 25,
-    color: colors[Math.round(Math.random() * colors.length)],
+    // color: colors[Math.round(Math.random() * colors.length)],
+    color: '#123772'
   });
 }
 
@@ -66,14 +68,15 @@ function draw3() {
     ctx3.moveTo(starI.x,starI.y);
     for (var j = 0, x = stars3.length; j < x; j++) {
       var starII = stars3[j];
-      if(distance(starI, starII) < 100) {
+      if(distance(starI, starII) < getLineDistance()) {
         //ctx.globalAlpha = (1 / 150 * distance(starI, starII).toFixed(1));
         ctx3.lineTo(starII.x,starII.y);
       }
     }
   }
   ctx3.lineWidth = 0.10;
-  ctx3.strokeStyle = rand;
+  // ctx3.strokeStyle = rand;
+  ctx3.strokeStyle = '#1E77EB'
   ctx3.stroke();
 }
 

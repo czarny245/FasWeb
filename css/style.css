@@ -1,13 +1,29 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Alata|Asap|Didact+Gothic|Hind|Hind+Guntur|Lexend+Deca|Overpass|Source+Sans+Pro&display=swap);
+
+
+p{
+    font-family: 'Source Sans Pro';
+    font-family: 'Didact Gothic';
+    font-family: 'Lexend Deca';
+    font-family: 'Overpass';
+    font-family: 'Asap';
+    font-family: 'Source Sans Pro';
+    font-family: 'Hind';
+    font-family: 'Hind Guntur';
+    line-height: 40px;
+}
 body{
   height: 100vh;
   margin: 0px;
   padding: 0px;
   overflow: hidden;
+  font-family: 'Alata', sans-serif;
 }
 body.open{
     height: 100%;
     overflow: auto;
+
 }
 /*Sign in section*/
 label {
@@ -55,7 +71,6 @@ input:focus {
 }
 .introduction{
     position:relative;
-    height: 700px;
 }
 
 #canvas {
@@ -69,7 +84,6 @@ input:focus {
     z-index: 0;
 
     margin: auto;
-    padding-top: 100px;
     width: 30%;
     display: block;
     margin-bottom: 200px;
@@ -78,18 +92,43 @@ input:focus {
 .empty-row{
     height:100px;
 }
+.grey-overlay{
+    width: 100%;
+    height: 100%;
+    background: rgb(17, 18, 35, 0.5);
+}
+.videoImage-header > span:nth-child(1){
+    color:#6ec3ff;
+}
+.videoImage-header{
+    padding-top: 150px;
+    color: white;
+}
 h1{
   font-family: "pt sans", Gadget, sans-serif;
   font-weight: normal;
-  font-size: 50px;
+  font-size: 60px;
+  /* color: #0B204F; */
+  color: #052244;
+  line-height: 85px;
 }
 h2{
+    font-family: 'Source Sans Pro';
+    font-family: 'Didact Gothic';
+    font-family: 'Lexend Deca';
+    font-family: 'Overpass';
+    font-family: 'Asap';
+    font-family: 'Source Sans Pro';
+    font-family: 'Hind';
+    font-family: 'Hind Guntur';
   font-family: "pt sans", Gadget, sans-serif;
   font-weight: normal;
-  font-size: 50px;
+  font-size: 60px;
+  color: #0B204F;
+  line-height: 85px;
 }
 p{
-    font-size: 22px;
+    font-size: 24px;
 }
 html{
   font-family: "pt sans", Gadget, sans-serif;
@@ -97,7 +136,10 @@ html{
   font-weight:normal
 }
 .what-header {
-  margin-bottom: 50px;
+    /* color: white; */
+    padding-top:150px;
+    margin-top: 0px;
+    margin-bottom: 50px;
 }
 .what-header, .what-paragraph{
   border-radius: 25px;
@@ -146,7 +188,6 @@ html{
 }
 .right-side{
     width: 50%;
-    padding-top: 150px;
 }
 .black-header.open{
     height: 400px;
@@ -187,6 +228,11 @@ html{
     margin-top: 40px;
     width: 30%;
     margin: auto;
+    background-image: url('../static/blocks.jpg');
+    width: 100%;
+    height: 400px;
+    background-size: 1600px;
+    margin-bottom: 150px;
 }
 .iframe {
     width: 100%;
@@ -199,6 +245,9 @@ html{
     height: 500px;
     margin: auto;
     display: block;
+}
+.market-header{
+    text-align: center;
 }
 .discover-container{
     margin-top: 50px;
@@ -214,7 +263,7 @@ html{
     float: left;
 }
 .discover-graphics{
-    height: 500px;
+    height: 800px;
     flex-grow: 2;
     -webkit-flex-grow: 1;
     max-width: 50%;
@@ -295,20 +344,27 @@ html{
     border-radius: 25px;
 }
 .philosophy-section{
-    margin-top: 50px;
+    margin-top: 100px;
     position:relative;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    min-height: 400px;
 }
 .philosophy{
-    position: absolute;
+    position: relative;
     top: 0px;
-    right: 15%;
-    width: 30%;
+    /* right: 15%; */
+    width: 33%;
+    z-index: 2;
+    margin-right: 50px;
+    float: right;
+    display: block
 }
 #canvas-phil-container{
     width: 100%;
     height: 400px;
     margin-bottom: 50px;
+    position: absolute;
+    z-index: 1;
 }
 .phil-header, .phil-paragraph {
     background:rgba(255,255,255,0.9);
@@ -332,14 +388,7 @@ html{
     height: 100%;
 }
 .info-header-cont{
-    position: absolute;
-    top: 0px;
-    left: 50%;
     text-align: center;
-}
-.info-header{
-    left: -50%;
-    position: relative;
 }
 .info-img{
     width: 95%;
@@ -411,23 +460,17 @@ html{
         background:rgba(255,255,255,0.7)
     }
     .phil-paragraph{
-        width: 70vw;
         padding: 2px;
         margin-left:50px;
         background:rgba(255,255,255,0.7)
-    }
-    .philosophy {
-        width: 100%;
-        right: 0%;
-        margin-left: 3%;
     }
     .edge-section{
     }
     .discover-text > p:nth-child(2){
         background:rgba(255,255,255,0.7);
     }
-    .info-img:focus {
-
+    .info-img {
+        margin-top:30px;
     }
 }
 @media only screen and (max-width: 485px) {
@@ -435,6 +478,11 @@ html{
         height: 500px;
     }
 
+}
+@media only screen and (max-width: 1200px){
+    .what-header{
+        padding-top: 0px;
+    }
 }
 @media only screen and (min-width: 600px) and (max-width: 1200px) {
 
@@ -464,12 +512,19 @@ html{
     }
     .discover-graphics{
         width: 100%;
+        height: 400px;
     }
     .logo{
         width: 250px;
     }
     .video-header{
         width: 95%;
+    }
+    .philosophy {
+        width: 100%;
+        right: 0%;
+        margin-left: 3%;
+        margin-right: 0px;
     }
 }
 @media only screen and (max-width: 1000px) {

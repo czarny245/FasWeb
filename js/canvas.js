@@ -19,6 +19,16 @@ var mouseY = (window.innerHeight - SCREEN_HEIGHT);
 var x
 if (innerWidth < 600) {x = 35} else {x = 150}
 
+
+getLineDistance = function() {
+  var line_distance
+  if (innerWidth < 700) {line_distance = 50}
+  if (innerWidth < 1000) {line_distance = 80}
+  else {line_distance = 120}
+  return line_distance
+}
+
+
 var stars = [], // Array that contains the stars
     FPS = 60, // Frames per second
     x = x, // Number of stars
@@ -77,7 +87,7 @@ function draw() {
     if(distance(mouse, starI) < 150) ctx.lineTo(mouse.x, mouse.y);
     for (var j = 0, x = stars.length; j < x; j++) {
       var starII = stars[j];
-      if(distance(starI, starII) < 120) {
+      if(distance(starI, starII) < getLineDistance()) {
 //        ctx.globalAlpha = (1 / 150 * distance(starI, starII).toFixed(1));
         ctx.lineTo(starII.x,starII.y);
       }
