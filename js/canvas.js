@@ -56,10 +56,11 @@ for (var i = 0; i < x; i++) {
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
     //radius: Math.random() * 1 + 1,
-    radius: getRandomInt(5)+3,
+    radius: getRandomInt(2)+3,
     vx: Math.floor(Math.random() * 50) - 25,
     vy: Math.floor(Math.random() * 50) - 25,
-    color: colors[Math.round(Math.random() * colors.length)],
+    // color: colors[Math.round(Math.random() * colors.length)],
+    color: '#001c70'
   });
 }
 
@@ -94,7 +95,8 @@ function draw() {
     }
   }
   ctx.lineWidth = 0.10;
-  ctx.strokeStyle = rand;
+  // ctx.strokeStyle = rand;
+  ctx.strokeStyle = '#001c70';
   ctx.stroke();
 }
 

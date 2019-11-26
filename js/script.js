@@ -38,23 +38,26 @@ submitEmail = function() {
     subscriber = $('.name-input').val();
     subscriberEmail = $('.email-input').val();
 
-    emailCompleted = false;
-    nameCompleted = false;
+    emailCompleted = true;
+    nameCompleted = true;
 
-    if(verify_email(subscriberEmail) == true) {
-        emailCompleted = true
-        $('.email-input').removeClass('not-completed')
-    }
-    if(verify_name(subscriber)==true){
-        nameCompleted = true
-        $('.name-input').removeClass('not-completed')
-    }
-    if(emailCompleted == false){
-        $('.email-input').addClass('not-completed')
-    }
-    if(nameCompleted == false){
-        $('.name-input').addClass('not-completed')
-    }
+    // emailCompleted = false;
+    // nameCompleted = false;
+
+    // if(verify_email(subscriberEmail) == true) {
+    //     emailCompleted = true
+    //     $('.email-input').removeClass('not-completed')
+    // }
+    // if(verify_name(subscriber)==true){
+    //     nameCompleted = true
+    //     $('.name-input').removeClass('not-completed')
+    // }
+    // if(emailCompleted == false){
+    //     $('.email-input').addClass('not-completed')
+    // }
+    // if(nameCompleted == false){
+    //     $('.name-input').addClass('not-completed')
+    // }
     if(emailCompleted==true && nameCompleted==true){
         // send_mail(subscriber, subscriberEmail)
         $('.black-header').addClass('open');

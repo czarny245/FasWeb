@@ -41,7 +41,8 @@ for (var i = 0; i < num3; i++) {
     vx: Math.floor(Math.random() * 50) - 25,
     vy: Math.floor(Math.random() * 50) - 25,
     // color: colors[Math.round(Math.random() * colors.length)],
-    color: '#123772'
+    // color: '#123772'
+    color: 'white'
   });
 }
 
@@ -76,7 +77,7 @@ function draw3() {
   }
   ctx3.lineWidth = 0.10;
   // ctx3.strokeStyle = rand;
-  ctx3.strokeStyle = '#1E77EB'
+  ctx3.strokeStyle = 'white'
   ctx3.stroke();
 }
 

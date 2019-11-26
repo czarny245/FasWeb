@@ -36,7 +36,7 @@ for (var i = 0; i < num2; i++) {
     x: Math.random() * canvas2.width,
     y: Math.random() * canvas2.height,
     //radius: Math.random() * 1 + 1,
-    radius: getRandomInt(5)+3,
+    radius: getRandomInt(2)+3,
     vx: Math.floor(Math.random() * 50) - 25,
     vy: Math.floor(Math.random() * 50) - 25,
     color: colors[Math.round(Math.random() * colors.length)],
@@ -72,8 +72,9 @@ function draw2() {
       }
     }
   }
-  ctx2.lineWidth = 0.10;
-  ctx2.strokeStyle = rand;
+  ctx2.lineWidth = 0.05;
+  // ctx2.strokeStyle = rand;
+  ctx2.strokeStyle = 'grey';
   ctx2.stroke();
 }
 
