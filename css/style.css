@@ -568,12 +568,43 @@ html{
         margin-bottom: 130px;
     }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     .discover-graphics{
-        height: 250px;
+        height: 180px;
         max-width: 90vw;
     }
     #canvas{
         height:500px;
+    }
+    p{
+        line-height: 25px;
+    }
+    .transparent{
+        margin-bottom: 20px;
+    }
+    .videoImage-header{
+        padding-top:20px;
+    }
+    .video-header{
+        margin-bottom: 20px;
+    }
+    .discover-container{
+        margin-top: 0px;
+    }
+    .market-leader-section{
+        margin-top: 20px;
+    }
+    .portfolio-header{
+        margin-top: 10px;
+    }
+    .edge-section {
+        margin-top: 20px;
+    }
+    .philosophy-section{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .discover-text > h2:nth-child(1){
+        font-size: 25px;
     }
 }
