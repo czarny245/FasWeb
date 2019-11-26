@@ -1,7 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Alata|Asap|Didact+Gothic|Hind|Hind+Guntur|Lexend+Deca|Overpass|Source+Sans+Pro&display=swap);
 
+h1:after{
+    height: 1px;
+    width: 80%;
+    margin: auto;
+    background-color: #052244;
+    content:'';
+    display:block;
+    /* border:2px solid black; */
 
+}
+.videoImage-header:after{
+    display:none;
+}
 p{
     font-family: 'Source Sans Pro';
     font-family: 'Didact Gothic';
@@ -233,7 +245,7 @@ html{
     margin: auto;
     background-image: url('../static/blocks.jpg');
     width: 100%;
-    height: 400px;
+    height: 350px;
     background-size: cover;
     margin-bottom: 150px;
 }
@@ -295,6 +307,7 @@ html{
     display: flex;
     flex-wrap: wrap;
     max-width: 100vw;
+    background-color: #f7f7f7;
 }
 .left-side{
     width: 30%;
@@ -314,6 +327,7 @@ html{
     display: flex;
     flex-wrap:wrap;
     max-width: 100vw;
+    background-color: #f7f7f7;
 }
 .portfolio-header{
     margin-top: 80px;
@@ -321,6 +335,7 @@ html{
 .edge-section{
     position: relative;
     margin-top: 150px;
+    padding-top: 50px;
 }
 .middle-section{
     display: block;
@@ -580,6 +595,7 @@ html{
         line-height: 25px;
     }
     .transparent{
+        padding-top: 50px;
         margin-bottom: 20px;
     }
     .videoImage-header{
@@ -598,7 +614,10 @@ html{
         margin-top: 10px;
     }
     .edge-section {
-        margin-top: 20px;
+        margin-top: 5px;
+    }
+    .edgy-header{
+        margin-top: 50px;
     }
     .philosophy-section{
         margin-top: 20px;
@@ -607,4 +626,14 @@ html{
     .discover-text > h2:nth-child(1){
         font-size: 25px;
     }
+    h1{
+        font-size: 25px;
+    }
+    .market-leader-section > div:nth-child(1) > h1:nth-child(1) > br:nth-child(1){
+        display: none;
+    }
+    .info-header > br:nth-child(1){
+        display: none;
+    }
+
 }
