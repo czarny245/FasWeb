@@ -11,6 +11,9 @@ h1:after{
     /* border:2px solid black; */
 
 }
+.what-header:after{
+    display:none
+}
 .leadership-header:after{
     display:none;
 }
@@ -20,6 +23,7 @@ h1:after{
 }
 .discover-header:after {
     width: 50%;
+    display:none;
 }
 .portfolio-header{
     border-left: solid #052244;
@@ -236,6 +240,26 @@ html{
     display: block;
     position: relative;
 }
+.quote-box-custom{
+    margin-top: 200px;
+    margin-bottom: 200px;
+    padding: 50px;
+    background: linear-gradient(27deg, rgba(21,20,180,1) 0%, rgba(6,10,73,1) 35%, rgba(0,0,0,1) 100%);
+    color:white;
+    position: relative;
+}
+.quote-custom{
+    display: inline-block;
+    width: 80%
+}
+.quote-custom-img{
+    /* opacity: 0.5; */
+    display: inline-block;
+    height: 200px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
 .logo-pass.open{
     transition-timing-function: ease-in;
     transition: 1s;
@@ -282,7 +306,7 @@ html{
 }
 .iframe-side {
     width: 100%;
-    height: 500px;
+    height: 100%;
     margin: auto;
     display: block;
 }
@@ -353,6 +377,7 @@ html{
     flex-wrap:wrap;
     max-width: 100vw;
     background-color: #f7f7f7;
+    padding-bottom: 10px;
 }
 .portfolio-header{
     margin-top: 80px;
@@ -495,6 +520,7 @@ html{
         display: block;
         text-align: center
     }
+
     .edgy-paragraph{
     background:rgba(255,255,255,0.7);
     }
@@ -516,7 +542,7 @@ html{
 }
 @media only screen and (max-width: 485px) {
     .iframe{
-        height: 500px;
+        height: 100%;
     }
 
 }
@@ -534,21 +560,17 @@ html{
         width: 60%;
     }
     .iframe{
-        height: 500px;
+        height: 100%;
     }
 
 }
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
-    #canvas-edge-container{
-        width: 100vw;
-        height: 700px;
-    }
     .left-side{
         width: 70%;
     }
 
     .iframe{
-        height: 500px;
+        height: 100%;
     }
 }
 @media only screen and (max-width: 1000px) {
@@ -602,7 +624,7 @@ html{
 @media only screen and (min-width: 800px) {
     .quote-box{
         margin-top: 170px;
-        margin-bottom: 170px;
+        margin-bottom: 350px;
     }
     .edge-section{
         margin-bottom: 130px;
@@ -662,6 +684,9 @@ html{
     }
     .watch-header{
         font-size: 25px;
+    }
+    .quote-custom-img{
+        opacity: 0.5;
     }
 
 }
