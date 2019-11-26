@@ -23,8 +23,8 @@ if (innerWidth < 600) {x = 35} else {x = 150}
 getLineDistance = function() {
   var line_distance
   if (innerWidth < 700) {line_distance = 50}
-  if (innerWidth < 1000) {line_distance = 80}
-  else {line_distance = 120}
+  if (innerWidth < 1000) {line_distance = 70}
+  else {line_distance = 80}
   return line_distance
 }
 

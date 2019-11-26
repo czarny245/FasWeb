@@ -37,7 +37,7 @@ for (var i = 0; i < num3; i++) {
     y: Math.random() * canvas3.height,
     //radius: Math.random() * 1 + 1,
     // radius: getRandomInt(2)+2,
-    radius: 4.5,
+    radius: 2.5,
     vx: Math.floor(Math.random() * 50) - 25,
     vy: Math.floor(Math.random() * 50) - 25,
     // color: colors[Math.round(Math.random() * colors.length)],

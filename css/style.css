@@ -11,8 +11,33 @@ h1:after{
     /* border:2px solid black; */
 
 }
+.leadership-header:after{
+    display:none;
+}
+.leadership-header{
+    border-left: solid #052244;
+    padding-left: 15px;
+}
+.discover-header:after {
+    width: 50%;
+}
+.portfolio-header{
+    border-left: solid #052244;
+    padding-left: 15px;   
+}
+.portfolio-header:after{
+    display:none
+}
+.phil-header:after{
+    display: none;
+}
 .videoImage-header:after{
     display:none;
+}
+.watch-header{
+    font-size: 35px;
+    text-align: center;
+    margin-top: 70px;
 }
 p{
     font-family: 'Source Sans Pro';
@@ -101,7 +126,7 @@ input:focus {
     margin: auto;
     width: 35%;
     display: block;
-    margin-bottom: 200px;
+    margin-bottom: 300px;
 
 }
 .empty-row{
@@ -138,7 +163,7 @@ h2{
     font-family: 'Hind Guntur';
   font-family: "pt sans", Gadget, sans-serif;
   font-weight: normal;
-  font-size: 60px;
+  font-size: 35px;
   color: #0B204F;
   line-height: 85px;
 }
@@ -470,10 +495,6 @@ html{
         display: block;
         text-align: center
     }
-    #canvas-edge-container{
-        width: 100vw;
-        height: 450px;
-    }
     .edgy-paragraph{
     background:rgba(255,255,255,0.7);
     }
@@ -518,6 +539,10 @@ html{
 
 }
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    #canvas-edge-container{
+        width: 100vw;
+        height: 700px;
+    }
     .left-side{
         width: 70%;
     }
@@ -634,6 +659,9 @@ html{
     }
     .info-header > br:nth-child(1){
         display: none;
+    }
+    .watch-header{
+        font-size: 25px;
     }
 
 }
