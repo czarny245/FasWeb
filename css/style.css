@@ -541,7 +541,7 @@ html{
 #canvas3{
     z-index: -1;
     width:100%;
-    height: 100%;
+    /* height: 100%; */
 }
 #canvas2{
     z-index: -1;
@@ -770,10 +770,14 @@ footer{
     }
     p{
         line-height: 25px;
+        font-size: 18px;
     }
     .transparent{
         padding-top: 50px;
-        margin-bottom: 20px;
+        margin-bottom: 200px;
+    }
+    .watch-header{
+        font-size: 20px;
     }
     .videoImage-header{
         padding-top:20px;
@@ -806,16 +810,13 @@ footer{
         font-size: 25px;
     }
     h1{
-        font-size: 25px;
+        font-size: 20px;
     }
     .market-leader-section > div:nth-child(1) > h1:nth-child(1) > br:nth-child(1){
         display: none;
     }
     .info-header > br:nth-child(1){
         display: none;
-    }
-    .watch-header{
-        font-size: 25px;
     }
     .quote-custom-img{
         opacity: 0.3;
@@ -832,6 +833,9 @@ footer{
     }
     .download-header{
         font-size: 20px;
+    }
+    .footer-div{
+        margin: 2px;
     }
 
 }

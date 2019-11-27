@@ -138,18 +138,18 @@ function windowResizeHandler1() {
   if (window.innerWidth > 1000) {
     canvas1.width = window.innerWidth / 2;
     canvas1.height = 800
-    console.log(canvas.width)
-    console.log(canvas.height)
+    // console.log(canvas.width)
+    // console.log(canvas.height)
   } else if (window.innerWidth > 800){
     canvas1.width = window.innerWidth;
     canvas1.height = 400
-    console.log(canvas.width)
-    console.log(canvas.height)
+    // console.log(canvas.width)
+    // console.log(canvas.height)
   } else {
     canvas1.width = window.innerWidth;
     canvas1.height = 200
-    console.log(canvas.width)
-    console.log(canvas.height)
+    // console.log(canvas.width)
+    // console.log(canvas.height)
   }
   // else if (window.innerWidth < 800){
   //   canvas1.width = window.innerWidth;

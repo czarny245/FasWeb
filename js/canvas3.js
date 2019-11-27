@@ -131,9 +131,14 @@ function windowResizeHandler3() {
 	//SCREEN_HEIGHT = window.innerHeight;
 
 	canvas3.width = window.innerWidth;
-	canvas3.height = 700;
+  
+  if (window.innerWidth < 800) {
+    canvas3.height = 400;
+  } else {
+    canvas3.height = 700;
+  }
 
-	canva3s.style.position = 'absolute';
+	canvas3.style.position = 'absolute';
 	// canvas.style.left = (window.innerWidth - SCREEN_WIDTH) * .5 + 'px';
 	// canvas.style.top = (window.innerHeight - SCREEN_HEIGHT) * .5 + 'px';
 }
