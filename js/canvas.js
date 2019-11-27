@@ -4,8 +4,8 @@ var canvas = document.getElementById("canvas"),
 let style_height123 = +getComputedStyle(canvas).getPropertyValue("height").slice(0, -2);
 let style_width123 = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
 
-//canvas.width = window.innerWidth;
-//canvas.height = window.innerHeight;
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
 
 canvas.width = style_width123
 canvas.height = style_height123
@@ -54,13 +54,14 @@ var rand = colors[Math.round(Math.random() * colors.length)];
 for (var i = 0; i < x; i++) {
   stars.push({
     x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
+    // y: Math.random() * canvas.height,
+    y: canvas.height - (Math.random() * canvas.height / 2),
     //radius: Math.random() * 1 + 1,
     radius: getRandomInt(2)+3,
     vx: Math.floor(Math.random() * 50) - 25,
     vy: Math.floor(Math.random() * 50) - 25,
-    // color: colors[Math.round(Math.random() * colors.length)],
-    color: '#001c70'
+    color: colors[Math.round(Math.random() * colors.length)],
+    // color: '#001c70'
   });
 }
 
@@ -133,11 +134,12 @@ function update() {
 //});
 
 
-document.addEventListener('mousemove', documentMouseMoveHandler, false);
-document.addEventListener('mousedown', documentMouseDownHandler, false);
-document.addEventListener('mouseup', documentMouseUpHandler, false);
-canvas.addEventListener('touchstart', canvasTouchStartHandler, false);
-canvas.addEventListener('touchmove', canvasTouchMoveHandler, false);
+// document.addEventListener('mousemove', documentMouseMoveHandler, false);
+// document.addEventListener('mousedown', documentMouseDownHandler, false);
+// document.addEventListener('mouseup', documentMouseUpHandler, false);
+// canvas.addEventListener('touchstart', canvasTouchStartHandler, false);
+// canvas.addEventListener('touchmove', canvasTouchMoveHandler, false);
+
 window.addEventListener('resize', windowResizeHandler, false);
 
 
@@ -157,42 +159,42 @@ tick();
 ///////////////////////////////////////
 
 
-function documentMouseMoveHandler(event) {
-	mouseX = event.clientX - (window.innerWidth - SCREEN_WIDTH) * .5;
-	mouseY = event.clientY - (window.innerHeight - SCREEN_HEIGHT) * .5;
-}
+// function documentMouseMoveHandler(event) {
+// 	mouseX = event.clientX - (window.innerWidth - SCREEN_WIDTH) * .5;
+// 	mouseY = event.clientY - (window.innerHeight - SCREEN_HEIGHT) * .5;
+// }
 
-function documentMouseDownHandler(event) {
-	mouseIsDown = true;
-}
+// function documentMouseDownHandler(event) {
+// 	mouseIsDown = true;
+// }
 
-function documentMouseUpHandler(event) {
-	mouseIsDown = false;
-}
-function canvasTouchStartHandler(event) {
-if(event.touches.length == 1) {
-		event.preventDefault();
-		mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5;
-		mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5;
-	}
-}
+// function documentMouseUpHandler(event) {
+// 	mouseIsDown = false;
+// }
+// function canvasTouchStartHandler(event) {
+// if(event.touches.length == 1) {
+// 		event.preventDefault();
+// 		mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5;
+// 		mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5;
+// 	}
+// }
 
-function canvasTouchMoveHandler(event) {
-	if(event.touches.length == 1) {
-		event.preventDefault();
-		mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5;
-		mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5;
-	}
-}
+// function canvasTouchMoveHandler(event) {
+// 	if(event.touches.length == 1) {
+// 		event.preventDefault();
+// 		mouseX = event.touches[0].pageX - (window.innerWidth - SCREEN_WIDTH) * .5;
+// 		mouseY = event.touches[0].pageY - (window.innerHeight - SCREEN_HEIGHT) * .5;
+// 	}
+// }
 
 function windowResizeHandler() {
 	//SCREEN_WIDTH = window.innerWidth;
 	//SCREEN_HEIGHT = window.innerHeight;
 
-	canvas.width = SCREEN_WIDTH;
-	canvas.height = SCREEN_HEIGHT;
-
+	canvas.width = window.innerWidth;
+	// canvas.height = SCREEN_HEIGHT;
+  canvas.height = 700
 	canvas.style.position = 'absolute';
-	canvas.style.left = (window.innerWidth - SCREEN_WIDTH) * .5 + 'px';
-	canvas.style.top = (window.innerHeight - SCREEN_HEIGHT) * .5 + 'px';
+	// canvas.style.left = (window.innerWidth - SCREEN_WIDTH) * .5 + 'px';
+	// canvas.style.top = (window.innerHeight - SCREEN_HEIGHT) * .5 + 'px';
 }

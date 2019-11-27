@@ -31,9 +31,18 @@ var rand = colors[Math.floor(Math.random() * colors.length)];
 
 // Push stars to array
 
-for (var i = 0; i < num2; i++) {
+for (var i = 0; i < (num2 / 2); i++) {
   stars2.push({
-    x: Math.random() * canvas2.width,
+    x: Math.random() * 300,
+    y: Math.random() * canvas2.height,
+    //radius: Math.random() * 1 + 1,
+    radius: getRandomInt(2)+3,
+    vx: Math.floor(Math.random() * 50) - 25,
+    vy: Math.floor(Math.random() * 50) - 25,
+    color: colors[Math.round(Math.random() * colors.length)],
+  });
+  stars2.push({
+    x: canvas2.width - (Math.random() * 300),
     y: Math.random() * canvas2.height,
     //radius: Math.random() * 1 + 1,
     radius: getRandomInt(2)+3,
@@ -111,6 +120,8 @@ canvas2.addEventListener('mousemove', function(e){
 });
 
 // Update and draw
+window.addEventListener('resize', windowResizeHandler2, false);
+
 
 function tick2() {
   draw2();
@@ -119,3 +130,15 @@ function tick2() {
 }
 
 tick2();
+
+function windowResizeHandler2() {
+	//SCREEN_WIDTH = window.innerWidth;
+	//SCREEN_HEIGHT = window.innerHeight;
+
+	canvas2.width = window.innerWidth;
+	canvas3.height = 700;
+
+	canvas2.style.position = 'absolute';
+	// canvas.style.left = (window.innerWidth - SCREEN_WIDTH) * .5 + 'px';
+	// canvas.style.top = (window.innerHeight - SCREEN_HEIGHT) * .5 + 'px';
+}

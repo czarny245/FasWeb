@@ -60,12 +60,15 @@ submitEmail = function() {
     // }
     if(emailCompleted==true && nameCompleted==true){
         // send_mail(subscriber, subscriberEmail)
-        $('.black-header').addClass('open');
+        
         $('.logo-pass').addClass('open');
         $('.logo').addClass('open');
+        $('.black-header').addClass('open');
         $('.entry-form').removeClass('vanishIn');
         $('.entry-form').addClass('remove');
         $('body').addClass('open')
+        $('.navbar').addClass('open')
+        $('.nav-container').addClass('open')
     }
 
 }

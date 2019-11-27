@@ -33,16 +33,16 @@ var rand = colors[Math.floor(Math.random() * colors.length)];
 
 for (var i = 0; i < num3; i++) {
   stars3.push({
-    x: Math.random() * canvas3.width,
+    x: Math.random() * 500,
     y: Math.random() * canvas3.height,
     //radius: Math.random() * 1 + 1,
-    // radius: getRandomInt(2)+2,
-    radius: 2.5,
+    radius: getRandomInt(5)+2,
+    // radius: 2.5,
     vx: Math.floor(Math.random() * 50) - 25,
     vy: Math.floor(Math.random() * 50) - 25,
-    // color: colors[Math.round(Math.random() * colors.length)],
+    color: colors[Math.round(Math.random() * colors.length)],
     // color: '#123772'
-    color: 'white'
+    // color: 'white'
   });
 }
 
@@ -77,7 +77,7 @@ function draw3() {
   }
   ctx3.lineWidth = 0.10;
   // ctx3.strokeStyle = rand;
-  ctx3.strokeStyle = 'white'
+  ctx3.strokeStyle = '#123772'
   ctx3.stroke();
 }
 
@@ -121,4 +121,19 @@ function tick3() {
   requestAnimationFrame(tick3);
 }
 
+window.addEventListener('resize', windowResizeHandler3, false);
+
+
 tick3();
+
+function windowResizeHandler3() {
+	//SCREEN_WIDTH = window.innerWidth;
+	//SCREEN_HEIGHT = window.innerHeight;
+
+	canvas3.width = window.innerWidth;
+	canvas3.height = 700;
+
+	canva3s.style.position = 'absolute';
+	// canvas.style.left = (window.innerWidth - SCREEN_WIDTH) * .5 + 'px';
+	// canvas.style.top = (window.innerHeight - SCREEN_HEIGHT) * .5 + 'px';
+}

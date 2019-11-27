@@ -121,6 +121,7 @@ canvas1.addEventListener('mousemove', function(e){
 });
 
 // Update and draw
+window.addEventListener('resize', windowResizeHandler1, false);
 
 function tick1() {
   draw1();
@@ -129,3 +130,35 @@ function tick1() {
 }
 
 tick1();
+
+function windowResizeHandler1() {
+	//SCREEN_WIDTH = window.innerWidth;
+	//SCREEN_HEIGHT = window.innerHeight;
+
+  if (window.innerWidth > 1000) {
+    canvas1.width = window.innerWidth / 2;
+    canvas1.height = 800
+    console.log(canvas.width)
+    console.log(canvas.height)
+  } else if (window.innerWidth > 800){
+    canvas1.width = window.innerWidth;
+    canvas1.height = 400
+    console.log(canvas.width)
+    console.log(canvas.height)
+  } else {
+    canvas1.width = window.innerWidth;
+    canvas1.height = 200
+    console.log(canvas.width)
+    console.log(canvas.height)
+  }
+  // else if (window.innerWidth < 800){
+  //   canvas1.width = window.innerWidth;
+  //   canvas1.height = 100
+  //   console.log(canvas.width)
+  //   console.log(canvas.height)
+
+
+	canvas1.style.position = 'absolute';
+	// canvas.style.left = (window.innerWidth - SCREEN_WIDTH) * .5 + 'px';
+	// canvas.style.top = (window.innerHeight - SCREEN_HEIGHT) * .5 + 'px';
+}
