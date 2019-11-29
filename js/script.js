@@ -74,13 +74,17 @@ submitEmail = function() {
 }
 $('.submit').click(submitEmail)
 
-ScrollReveal().reveal('.iframe', { duration: 1300 });
-ScrollReveal().reveal('.video-header', { duration: 1300 });
-ScrollReveal().reveal('.discover-container', { duration: 1300 });
-ScrollReveal().reveal('.market-leader-section', { duration: 1300 });
-ScrollReveal().reveal('.portfolio-section', { duration: 1300 });
-ScrollReveal().reveal('.edge-section', { duration: 1300 });
-ScrollReveal().reveal('.philosophy-section', { duration: 1300 });
-ScrollReveal().reveal('#quote1', { duration: 1300 });
-ScrollReveal().reveal('#quote2', { duration: 1300 });
-ScrollReveal().reveal('.infographic-section', { duration: 1300 });
+ScrollReveal().reveal('.iframe', { duration: 2000 });
+ScrollReveal().reveal('.video-header', { duration: 2000 });
+ScrollReveal().reveal('.discover-container', { duration: 2000 });
+ScrollReveal().reveal('.market-leader-section', { duration: 2000 });
+ScrollReveal().reveal('.portfolio-section', { duration: 2000 });
+ScrollReveal().reveal('.edge-section', { duration: 2000 });
+ScrollReveal().reveal('.philosophy-section', { duration: 2000 });
+ScrollReveal().reveal('#quote1', { duration: 2000 });
+ScrollReveal().reveal('#quote2', { duration: 2000 });
+ScrollReveal().reveal('.infographic-section', { duration: 2000 });
+ScrollReveal().reveal('.quote-custom', { duration: 2000 });
+ScrollReveal().reveal('h1', { duration: 2000 });
+ScrollReveal().reveal('p', { duration: 2000 });
+ScrollReveal().reveal('iframe', { duration: 2000 });
