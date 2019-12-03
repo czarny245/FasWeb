@@ -190,10 +190,16 @@ tick();
 function windowResizeHandler() {
 	//SCREEN_WIDTH = window.innerWidth;
 	//SCREEN_HEIGHT = window.innerHeight;
-
-	canvas.width = window.innerWidth;
+  if(window.window.innerWidth > 800){
+    	canvas.width = window.innerWidth;
 	// canvas.height = SCREEN_HEIGHT;
-  canvas.height = 700
+      canvas.height = 800
+  } else {
+    canvas.width = window.innerWidth;
+    canvas.height = 500
+  }
+
+
 	canvas.style.position = 'absolute';
 	// canvas.style.left = (window.innerWidth - SCREEN_WIDTH) * .5 + 'px';
 	// canvas.style.top = (window.innerHeight - SCREEN_HEIGHT) * .5 + 'px';
