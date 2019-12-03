@@ -884,7 +884,7 @@ footer{
         font-size: 25px;
     }
     h1{
-        font-size: 20px;
+        font-size: 30px;
     }
     .market-leader-section > div:nth-child(1) > h1:nth-child(1) > br:nth-child(1){
         display: none;
@@ -906,12 +906,16 @@ footer{
         margin-top: 20px;
         margin-bottom: 20px;
         padding: 20px;
+        margin: 5%;
     }
     .download-header{
         font-size: 20px;
     }
     .footer-div{
         margin: 2px;
+    }
+    .iframe4{
+        height: 400px;
     }
 
 }
