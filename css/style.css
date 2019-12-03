@@ -149,7 +149,7 @@ input:focus {
     z-index: 0;
 
     margin: auto;
-    width: 35%;
+    width: 30%;
     display: block;
     margin-bottom: 500px;
 
@@ -210,6 +210,7 @@ html{
 }
 .what-paragraph{
     color: #052244;
+    /* width: 30vw; */
 }
 .discover-parag{
     color: #052244;
@@ -731,7 +732,7 @@ footer{
         width: 250px;
     }
     .transparent {
-        width: 60%;
+        width: 40%;
     }
     .iframe{
         height: 500px;
@@ -917,5 +918,8 @@ footer{
     .iframe4{
         height: 400px;
     }
+    /* .what-paragraph{
+        width: 80vw;
+    } */
 
 }
