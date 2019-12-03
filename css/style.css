@@ -32,10 +32,14 @@
 }
 .portfolio-header{
     border-left: solid #052244;
-    padding-left: 15px;   
+    padding-left: 15px;
 }
 .portfolio-header:after{
     display:none
+}
+.phil-header{
+    border-left: solid #052244;
+    padding-left: 15px;
 }
 .phil-header:after{
     display: none;
@@ -48,6 +52,16 @@
     text-align: center;
     margin-top: 70px;
     margin-bottom: 100px;
+}
+.line-horizontal{
+    height: 3px;
+    width: 80px;
+    background-color: #052244;
+    z-index: 2;
+    opacity: 1;
+    margin: auto;
+    margin-top:20px;
+    margin-bottom:20px;
 }
 p{
     font-family: 'Source Sans Pro';
@@ -125,7 +139,7 @@ input:focus {
 }
 
 #canvas {
-    background: white;
+    /* background: white; */
     width: 100%;
     height: 700px;
     position: absolute;
@@ -272,15 +286,17 @@ html{
     padding: 20px;
     position: relative;
     border: solid;
-    transition-duration: 0.5s;
+    transition-duration: 0.4s;
     text-decoration: none;
     font-size: 20px;
+    border-width: 5px;
+    text-transform: uppercase;
 }
 .download-pdf-button:hover{
     /* color: #052244; */
-    color:#45699D;
-    border-color: #45699D;
-    transition-duration: 0.5s;
+    color:#0737b2;
+    border-color: #0737b2;
+    transition-duration: 0.4s;
 }
 .download-container{
     text-align: center;
@@ -302,8 +318,8 @@ html{
     right: 20px;
 }
 .quote-box-custom{
-    border-radius: 100px;
-    max-width: 80%;
+    border-radius: 30px;
+    max-width: 100%;
     margin: auto;
     margin-top: 200px;
     margin-bottom: 200px;
@@ -312,13 +328,16 @@ html{
     color:white;
     position: relative;
     display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 .quote-custom{
     display: inline-block;
     width: 80%;
-    font-size: 24px;
+    font-size: 20px;
     margin: 60px;
     margin-right: 20px;
+    font-style: italic;
 }
 .quote-custom-img{
     /* opacity: 0.5; */
@@ -520,7 +539,6 @@ html{
 }
 .phil-header, .phil-paragraph {
     background:rgba(255,255,255,0.9);
-    border-radius: 25px;
     padding: 10px;
     /* color:white */
 }
@@ -730,6 +748,9 @@ footer{
         right: 0%;
         margin-right: 0px;
     }
+    .quote-custom{
+        margin: 45px;
+    }
     /* .iframe-side{
         height: 800px;
     } */
@@ -798,6 +819,8 @@ footer{
     .quote-box{
         margin-top: 170px;
         margin-bottom: 350px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     .edge-section{
         margin-bottom: 130px;
@@ -872,6 +895,7 @@ footer{
     .quote-custom{
         width:90%;
         font-size: 18px;
+        margin: 35px;
     }
     .quote-box-custom{
         margin-top: 20px;
