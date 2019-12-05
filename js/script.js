@@ -17,10 +17,11 @@ send_mail = function(name, email) {
         Host : "outlook.office365.com",
         Username : "bartlomiej.szywala@fasanara.com",
         Password : "group#Y2kt",
-        To : 'bartlomiej.szywala@fasanara.com',
+        To : 'francesco.filia@fasanara.com',
+        // To : "bartlomiej.szywala@fasanara.com",
         From : "bartlomiej.szywala@fasanara.com",
         Subject: "New Subscriber from Fintech page",
-        Body : "The new subscriber nameis "+name+" and his email is "+email
+        Body : "The new subscriber name is: "+name+" and his email is: "+email
     })
     //     .then(
     //   message => alert(message)
@@ -152,6 +153,31 @@ $('.sign-up-button').click(showSignUp)
 $('.enter-button').click(showPasswordForm)
 $('.back-button').click(goToFirstChoice)
 $('.pass-submit').click(submitPassword)
+// $('.password-input').addEventListener('keypress', function (e) {
+//     var key = e.which || e.keyCode;
+//     if (key === 13) {submitPassword}
+// });
+// $('.email-input').addEventListener('keypress', function (e) {
+//     var key = e.which || e.keyCode;
+//     if (key === 13) {submitEmail}
+// });
+function inputKeyUpPass(e) {
+    e.which = e.which || e.keyCode;
+    if(e.which == 13) {
+        submitPassword
+    }
+}
+function inputKeyUpEmail(e) {
+    e.which = e.which || e.keyCode;
+    if(e.which == 13) {
+        submitEmail
+    }
+}
+document.addEventListener('keyup', function(e){
+    if(e.keyCode == 13){
+        submitEmail;}
+  })
+
 
 ScrollReveal().reveal('.iframe', { duration: 2000 });
 ScrollReveal().reveal('.video-header', { duration: 2000 });

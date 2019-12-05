@@ -312,7 +312,8 @@ html{
 }
 .entry-form.rollin, .password-form.rollin, .first-choice.rollin{
     max-width: 0px;
-    max-height: 0px
+    max-height: 0px;
+    margin-left: -1000px;
     /* display: none; */
     /* transition-duration: 2s; */
 }
