@@ -705,13 +705,13 @@ footer{
         height: 100vh;
     }
     .logo{
-        top: 100px;
+        top: 50px;
     }
     #canvas1{
         height: 100%;
     }
     .form-div{
-        margin-top: 150px;
+        margin-top: 75px;
     }
     .black-header.open {
         height: 350px;
