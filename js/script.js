@@ -32,7 +32,7 @@ verify_email = function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 };
 verify_name = function validateName(name){
-    var re = /^[A-Za-z]+$/
+    var re = /^[a-zA-Z ]*$/;
     return re.test(String(name))
 };
 
