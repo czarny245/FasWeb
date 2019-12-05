@@ -105,7 +105,8 @@ input:focus {
     opacity: .8;
 }
 .name-input,
-.email-input {
+.email-input,
+.password-input {
     padding: 5px;
     height: 30px;
     border-radius: 30px;
@@ -118,7 +119,39 @@ input:focus {
     border-color: red;
     opacity: 1;
 }
-.submit {
+.back-button{
+    display: inline-block;
+    margin: auto;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* width: 10px; */
+    padding: 1rem;
+    transition: all ease .4s;
+    /* margin-left: -100px; */
+}
+.back-button:hover{
+    cursor: pointer;
+}
+.confirmation-text{
+    opacity: 0;
+    max-width: 0px;
+    max-height: 0px;
+    color: #fff;
+    font-size: 15px;
+}
+.confirmation-text.display{
+    opacity: 1;
+    max-width: 1000px;
+    max-height: 1000px;
+    display: block;
+}
+.submit, .sign-up-button, .enter-button, .pass-submit{
+    display: inline-block;
+    margin: auto;
     border-radius: 30px;
     border: 1px solid #fff;
     color: #fff;
@@ -129,14 +162,23 @@ input:focus {
     padding: 1rem;
     transition: all ease .4s;
 }
-.submit:hover {
-    background-color: #44c8ed;
-    border-color: #44c8ed;
+.submit:hover, .sign-up-button:hover, .enter-button:hover, .pass-submit:hover{
+    /* background-color: #44c8ed;
+    border-color: #44c8ed; */
     cursor: pointer;
+    color: black;
+    background-color: silver;
+    border-color: silver;
 }
 .introduction{
     position:relative;
 }
+.submit.inactive {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+    transition: 1s;
+ }
 
 #canvas {
     /* background: white; */
@@ -251,16 +293,33 @@ html{
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
 }
-.entry-form{
+.entry-form, .password-form, .first-choice{
+    margin: auto;
     opacity: 0;
+    max-width: 0px;
+    max-height: 0px;
 }
-.entry-form.vanishIn{
+.entry-form.rollout, .password-form.rollout, .first-choice.rollout{
+    opacity: 0px;
+    max-width: 400px;
+    max-height: 500px;
+}
+.entry-form.vanishIn, .password-form.vanishIn, .first-choice.vanishIn{
     opacity: 1;
     transition-duration: 1s;
+    max-width: 400px;
+    max-height: 500px;
 }
-.entry-form.remove{
-    display: none;
-    transition-duration: 2s;
+.entry-form.rollin, .password-form.rollin, .first-choice.rollin{
+    max-width: 0px;
+    max-height: 0px
+    /* display: none; */
+    /* transition-duration: 2s; */
+}
+.entry-form.vanishOut, .password-form.vanishOut, .first-choice.vanishOut{
+    opacity: 0;
+    /* display: none; */
+    transition-duration: 1s;
 }
 .right-side{
     width: 45%;
@@ -380,7 +439,7 @@ html{
     transition-duration: 0.3s;
 }
 .form-div{
-    margin-top: 300px;
+    margin-top: 200px;
 }
 .video-header {
     text-align: center;
