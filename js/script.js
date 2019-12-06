@@ -62,7 +62,7 @@ submitEmail = function() {
         $('.name-input').addClass('not-completed')
     }
     if(emailCompleted==true && nameCompleted==true){
-        // send_mail(subscriber, subscriberEmail)
+        send_mail(subscriber, subscriberEmail)
 
         $('.submit').addClass('inactive')
         
