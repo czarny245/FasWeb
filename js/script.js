@@ -89,7 +89,7 @@ showSignUp = function() {
     setTimeout(function(){
         $('.entry-form').removeClass('vanishOut');
         $('.entry-form').addClass('vanishIn');
-    }, 1000);
+    }, 700);
 }
 
 showPasswordForm = function() {
@@ -104,7 +104,7 @@ showPasswordForm = function() {
     setTimeout(function(){
         $('.password-form').removeClass('vanishOut');
         $('.password-form').addClass('vanishIn');
-    }, 1000);
+    }, 700);
 }
 
 submitPassword = function() {
@@ -134,18 +134,18 @@ goToFirstChoice = function() {
     $('.entry-form').addClass('vanishOut');
     setTimeout(function(){
         $('.password-form').addClass('rollin');
-    }, 1000);
+    }, 500);
     setTimeout(function(){
         $('.entry-form').addClass('rollin');
-    }, 1000);
+    }, 500);
     setTimeout(function(){
         $('.first-choice').removeClass('rollin');
         $('.first-choice').addClass('rollout');
-    }, 1100);
+    }, 600);
     setTimeout(function(){
         $('.first-choice').removeClass('vanishOut');
         $('.first-choice').addClass('vanishIn');
-    }, 1200);
+    }, 700);
 }
 
 $('.submit').click(submitEmail)

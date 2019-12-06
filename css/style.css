@@ -133,9 +133,6 @@ input:focus {
     transition: all ease .4s;
     /* margin-left: -100px; */
 }
-.back-button:hover{
-    cursor: pointer;
-}
 .confirmation-text{
     opacity: 0;
     max-width: 0px;
@@ -162,7 +159,7 @@ input:focus {
     padding: 1rem;
     transition: all ease .4s;
 }
-.submit:hover, .sign-up-button:hover, .enter-button:hover, .pass-submit:hover{
+.submit:hover, .sign-up-button:hover, .enter-button:hover, .pass-submit:hover, .back-button:hover{
     /* background-color: #44c8ed;
     border-color: #44c8ed; */
     cursor: pointer;
@@ -306,7 +303,7 @@ html{
 }
 .entry-form.vanishIn, .password-form.vanishIn, .first-choice.vanishIn{
     opacity: 1;
-    transition-duration: 1s;
+    transition-duration: 0.4s;
     max-width: 400px;
     max-height: 500px;
 }
@@ -320,7 +317,7 @@ html{
 .entry-form.vanishOut, .password-form.vanishOut, .first-choice.vanishOut{
     opacity: 0;
     /* display: none; */
-    transition-duration: 1s;
+    transition-duration: 0.4s;
 }
 .right-side{
     width: 45%;
