@@ -62,18 +62,23 @@ submitEmail = function() {
         $('.name-input').addClass('not-completed')
     }
     if(emailCompleted==true && nameCompleted==true){
-        send_mail(subscriber, subscriberEmail)
+        // send_mail(subscriber, subscriberEmail)
 
         $('.submit').addClass('inactive')
-        $('.confirmation-text').addClass('display')
-        // $('.logo-pass').addClass('open');
-        // $('.logo').addClass('open');
-        // $('.black-header').addClass('open');
-        // $('.entry-form').removeClass('vanishIn');
-        // $('.entry-form').addClass('remove');
-        // $('body').addClass('open')
-        // $('.navbar').addClass('open')
-        // $('.nav-container').addClass('open')
+        
+        $('.entry-form').removeClass('vanishIn');
+        $('.entry-form').removeClass('rollout');
+        $('.entry-form').addClass('vanishOut');
+        setTimeout(function(){
+            $('.password-form').removeClass('rollin');
+            $('.password-form').addClass('rollout');
+            $('.password-form').addClass('vanishIn');
+        }, 600);
+        setTimeout(function(){
+            $('.confirmation-text').addClass('display')
+        }, 600);
+
+
     }
 
 }

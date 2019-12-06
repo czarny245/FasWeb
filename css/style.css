@@ -145,6 +145,7 @@ input:focus {
     max-width: 1000px;
     max-height: 1000px;
     display: block;
+    transition-delay: 0.5;
 }
 .submit, .sign-up-button, .enter-button, .pass-submit{
     display: inline-block;
@@ -604,6 +605,7 @@ html{
 }
 .phil-paragraph {
     color: #052244;
+    margin-left: 0px;
 }
 .infographic-section {
     position: relative;
